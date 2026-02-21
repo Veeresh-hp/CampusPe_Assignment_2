@@ -33,9 +33,19 @@ Special Instructions:
 - Ensure you have Python 3.x installed on your system.
 
 Challenges Faced:
-Building these scripts was an insightful journey! One of the main challenges was ensuring robust user input handling, especially in interactive tools like the ATM Simulator and the Mathematical Function Suite. Dealing with edge cases—like preventing division by zero or managing non-numeric inputs—required careful validation. 
 
-Designing the Number Pattern Printer and the logic for Armstrong and Perfect numbers also tested my algorithm-thinking skills. It was satisfying to see everything come together in the final Suite of functions!
+Working on this assignment was both challenging and rewarding. One of the key difficulties was handling user inputs properly, especially in interactive programs like the ATM Simulator and the Mathematical Function Suite. Ensuring the programs handled invalid inputs without crashing required careful use of validation techniques and exception handling.
+
+Designing logic-heavy programs such as:
+    Number Pattern Printer
+    Armstrong Number Checker
+    Perfect Number Validator
+    Prime Number Range Generator
+
+helped improve my problem-solving and algorithmic thinking skills.
+
+This assignment significantly strengthened my confidence in Python fundamentals. It helped me understand how to structure programs cleanly, manage edge cases effectively, and think logically while solving problems.
+
 
 ---------------------------------------------------------
 Thank you for reviewing my work!

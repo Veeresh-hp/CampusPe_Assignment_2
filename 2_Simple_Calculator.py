@@ -1,8 +1,3 @@
-"""
-Program: Multi-Operation Calculator
-Description: Performs arithmetic operations on two user inputs.
-"""
-
 try:
     first_value = float(input("Enter first number: "))
     second_value = float(input("Enter second number: "))

@@ -1,7 +1,3 @@
-"""
-Program: Multiplication Table Tool
-"""
-
 try:
     base_number = int(input("Enter base number: "))
     end_range = int(input("Enter range end value: "))

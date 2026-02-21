@@ -1,8 +1,3 @@
-"""
-Program: Restaurant Bill Splitter
-Description: Calculates tax, tip and per person share.
-"""
-
 try:
     total_bill_amount = float(input("Enter total bill amount: ₹"))
     total_people_count = int(input("Enter number of people: "))

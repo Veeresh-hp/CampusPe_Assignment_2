@@ -1,8 +1,3 @@
-"""
-Program: Personal Bio Card
-Description: Displays student information in a formatted card.
-"""
-
 # Assigning personal details to variables
 student_full_name = "Veeresh"
 student_age_year = 21

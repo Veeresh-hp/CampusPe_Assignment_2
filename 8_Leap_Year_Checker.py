@@ -1,7 +1,3 @@
-"""
-Program: Leap Year Validator
-"""
-
 try:
     year_input_value = int(input("Enter year to check: "))
 

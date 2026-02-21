@@ -1,7 +1,3 @@
-"""
-Program: ATM Simulation System
-"""
-
 current_balance_amount = 10000
 
 while True:

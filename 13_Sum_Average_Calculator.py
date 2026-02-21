@@ -1,7 +1,3 @@
-"""
-Program: Statistical Summary Calculator
-"""
-
 try:
     count_numbers = int(input("How many numbers will you enter? "))
     if count_numbers <= 0:

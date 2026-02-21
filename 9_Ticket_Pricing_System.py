@@ -1,7 +1,3 @@
-"""
-Program: Movie Ticket Pricing System
-"""
-
 try:
     user_age = int(input("Enter age: "))
     visit_day = input("Enter day of week: ").strip().lower()

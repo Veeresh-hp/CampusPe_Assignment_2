@@ -1,7 +1,3 @@
-"""
-Program: Prime Number Analyzer
-"""
-
 def check_prime(num):
     if num <= 1:
         return False

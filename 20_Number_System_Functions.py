@@ -1,7 +1,3 @@
-"""
-Program: Mathematical Function Suite
-"""
-
 def factorial(n):
     if n < 0: return "Invalid"
     result = 1

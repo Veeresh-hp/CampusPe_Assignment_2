@@ -1,8 +1,3 @@
-"""
-Program: Sentence Analyzer
-Description: Performs various string operations.
-"""
-
 try:
     user_sentence = input("Enter a sentence: ").strip()
 

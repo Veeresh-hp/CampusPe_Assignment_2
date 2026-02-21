@@ -1,7 +1,3 @@
-"""
-Program: Advanced Text Analyzer
-"""
-
 def count_words(text): return len(text.split())
 def count_vowels(text): return sum(1 for ch in text.lower() if ch in "aeiou")
 def count_consonants(text): return sum(1 for ch in text.lower() if ch.isalpha() and ch not in "aeiou")

@@ -1,8 +1,3 @@
-"""
-Program: Dynamic Pattern Generator
-Description: Prints selected number pattern based on user choice and height.
-"""
-
 def pattern_one(rows):
     for line in range(1, rows + 1):
         print(" ".join(str(num) for num in range(1, line + 1)))

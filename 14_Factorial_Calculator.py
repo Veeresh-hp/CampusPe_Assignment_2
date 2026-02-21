@@ -1,7 +1,3 @@
-"""
-Program: Step-by-Step Factorial Calculator
-"""
-
 try:
     number_input = int(input("Enter a number: "))
 

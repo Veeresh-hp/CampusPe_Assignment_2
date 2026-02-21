@@ -1,7 +1,3 @@
-"""
-Program: Smart Guessing Game
-"""
-
 import random
 
 best_attempt_score = None

@@ -1,7 +1,3 @@
-"""
-Program: Palindrome Verification Tool
-"""
-
 try:
     user_input_text = input("Enter word or number: ")
     cleaned_text = user_input_text.lower()

@@ -1,7 +1,3 @@
-"""
-Program: Functional Calculator
-"""
-
 def addition(a, b): return a + b
 def subtraction(a, b): return a - b
 def multiplication(a, b): return a * b

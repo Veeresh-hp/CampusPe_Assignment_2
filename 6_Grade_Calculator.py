@@ -1,8 +1,3 @@
-"""
-Program: Academic Grade Evaluator
-Description: Calculates total, percentage, grade and pass/fail status.
-"""
-
 try:
     subject_scores = []
     for index in range(1, 6):

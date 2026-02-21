@@ -1,8 +1,3 @@
-"""
-Program: Age Calculator
-Description: Calculates age details from birth year.
-"""
-
 from datetime import datetime
 
 try:
