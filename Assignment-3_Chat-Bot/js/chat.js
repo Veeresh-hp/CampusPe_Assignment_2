@@ -13,6 +13,8 @@ $(document).ready(function() {
     // State
     let isFirstMessage = true;
     let isGenerating = false;
+    let generationTimeout = null;
+    let typingInterval = null;
 
     // Initialize Theme
     const isDarkMode = $('#darkModeToggle').is(':checked');
@@ -66,6 +68,7 @@ $(document).ready(function() {
             });
             $sendBtn.prop('disabled', false); // Enable send button if we have files
         }
+        $(this).val(''); // Clear the value so the exact same file can be selected again
     });
 
     $attachPreview.on('click', '.remove-file', function() {
@@ -95,7 +98,7 @@ $(document).ready(function() {
     $chatInput.on('keydown', function(e) {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-            if (!isGenerating && $(this).val().trim().length > 0) {
+            if (!isGenerating) {
                 sendMessage();
             }
         }
@@ -103,7 +106,7 @@ $(document).ready(function() {
 
     // Send Button Click
     $sendBtn.on('click', function() {
-        if (!isGenerating && $chatInput.val().trim().length > 0) {
+        if (!isGenerating) {
             sendMessage();
         }
     });
@@ -145,15 +148,21 @@ $(document).ready(function() {
 
     // New Chat Button
     $('#new-chat-btn').on('click', function() {
+        if (generationTimeout) clearTimeout(generationTimeout);
+        if (typingInterval) clearInterval(typingInterval);
+        
         $messagesWrapper.empty();
         $welcomeScreen.show();
         isFirstMessage = true;
         isGenerating = false;
+        $chatInput.prop('disabled', false);
         $chatInput.val('').trigger('input');
         $chatInput.focus();
         $sidebar.removeClass('show');
         $sidebarOverlay.removeClass('show');
         $typingIndicator.addClass('d-none');
+        $attachPreview.empty();
+        $fileUpload.val('');
     });
 
     // Export Chat functionality
@@ -235,7 +244,7 @@ $(document).ready(function() {
         // Simulate network delay (1-1.5 seconds)
         const delay = Math.floor(Math.random() * 500) + 1000;
         
-        setTimeout(() => {
+        generationTimeout = setTimeout(() => {
             $typingIndicator.addClass('d-none');
             const aiResponse = generateAIResponse(text);
             
@@ -289,7 +298,7 @@ $(document).ready(function() {
         let index = 0;
         
         // Typing speed: ~20ms per token
-        const typeInterval = setInterval(() => {
+        typingInterval = setInterval(() => {
             if (index < tokens.length) {
                 let token = tokens[index];
                 if (token === '\\n' || token === '\\n\\n') {
@@ -300,7 +309,7 @@ $(document).ready(function() {
                 index++;
                 if (index % 5 === 0) scrollToBottom();
             } else {
-                clearInterval(typeInterval);
+                clearInterval(typingInterval);
                 isGenerating = false;
                 $chatInput.prop('disabled', false);
                 $chatInput.focus();
